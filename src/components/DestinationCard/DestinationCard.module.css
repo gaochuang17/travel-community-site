@@ -1,0 +1,31 @@
+.destinationCard {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.destinationCard img {
+  width: 82px;
+  height: 76px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.destinationCard strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.destinationCard p,
+.destinationCard span {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.destinationCard span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+}
