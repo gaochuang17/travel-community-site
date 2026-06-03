@@ -28,7 +28,7 @@ export function Hero({ onShareClick }) {
       </div>
       <div className={styles.heroPanel}>
         <span className={styles.panelLabel}>今日热门路线</span>
-        <strong>云南雨崩 5 日轻徒步</strong>
+        <strong>云南雨崩 7 日轻徒步</strong>
         <p>23 人正在讨论住宿、路况和装备。</p>
         <div className={styles.miniAvatars} aria-label="参与用户">
           <span>J</span>
