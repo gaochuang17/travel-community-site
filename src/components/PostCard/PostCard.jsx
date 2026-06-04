@@ -1,11 +1,17 @@
 import React from "react";
-import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { MapPin, Star } from "lucide-react";
+import { getPostSlug } from "../../utils/slug";
 import styles from "./PostCard.module.css";
 
 export function PostCard({ post }) {
+  const postSlug = getPostSlug(post);
+
   return (
     <article className={`${styles.postCard} ${post.isFresh ? styles.freshPost : ""}`}>
-      <img src={post.image} alt={post.title} />
+      <Link to={`/notes/${postSlug}`}>
+        <img src={post.image} alt={post.title} />
+      </Link>
       <div className={styles.postBody}>
         <div className={styles.postAuthor}>
           <span className={styles.avatar}>{post.avatar}</span>
@@ -18,13 +24,31 @@ export function PostCard({ post }) {
           </div>
         </div>
         {post.isFresh && <span className={styles.freshBadge}>刚刚发布</span>}
-        <h3>{post.title}</h3>
+        <h3>
+          <Link className={styles.titleLink} to={`/notes/${postSlug}`}>
+            {post.title}
+          </Link>
+        </h3>
+        {post.rating > 0 && (
+          <div className={styles.ratingDisplay}>
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                size={14}
+                className={i < post.rating ? styles.starFilled : styles.starEmpty}
+              />
+            ))}
+            <span>{post.rating}颗星</span>
+          </div>
+        )}
         <p className={styles.postText}>{post.text}</p>
         <div className={styles.postActions}>
-          <button>♥ {post.likes}</button>
-          <button>💬 {post.comments}</button>
-          <button>🔖 {post.saves}</button>
-          <button>↗ 转发</button>
+          <button type="button">♥ {post.likes}</button>
+          <button type="button">💬 {post.comments}</button>
+          <button type="button">🔖 {post.saves}</button>
+          <Link className={styles.shareAction} to={`/notes/${postSlug}`}>
+            查看详情
+          </Link>
         </div>
       </div>
     </article>

@@ -55,6 +55,40 @@
   line-height: 1.25;
 }
 
+.titleLink:hover {
+  color: var(--green);
+}
+
+.shareAction {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(28, 107, 90, 0.25);
+  border-radius: 8px;
+  background: rgba(28, 107, 90, 0.08);
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.ratingDisplay {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.starFilled {
+  color: #f59e0b;
+  fill: #f59e0b;
+}
+
+.starEmpty {
+  color: #d1d5db;
+}
+
 .freshBadge {
   display: inline-flex;
   align-items: center;

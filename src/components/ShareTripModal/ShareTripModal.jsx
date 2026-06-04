@@ -1,5 +1,5 @@
 import React from "react";
-import { X, Send, Image } from "lucide-react";
+import { X, Send, Image, Star } from "lucide-react";
 import styles from "./ShareTripModal.module.css";
 
 export function ShareTripModal({ draft, isReady, onChange, onClose, onSubmit }) {
@@ -59,6 +59,26 @@ export function ShareTripModal({ draft, isReady, onChange, onClose, onSubmit }) 
               rows="5"
               value={draft.text}
             />
+          </label>
+
+          <label>
+            旅途评分
+            <div className={styles.ratingContainer}>
+              {[1, 2, 3, 4, 5].map((star) => (
+                <button
+                  key={star}
+                  type="button"
+                  className={`${styles.starButton} ${draft.rating >= star ? styles.starActive : ""}`}
+                  onClick={() => onChange({ target: { name: 'rating', value: star } })}
+                  aria-label={`${star}颗星`}
+                >
+                  <Star size={24} />
+                </button>
+              ))}
+              <span className={styles.ratingText}>
+                {draft.rating > 0 ? `${draft.rating}颗星` : "选择评分"}
+              </span>
+            </div>
           </label>
 
           <label>

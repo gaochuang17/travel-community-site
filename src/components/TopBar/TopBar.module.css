@@ -50,6 +50,22 @@
   color: var(--green);
 }
 
+.navActive {
+  color: var(--green);
+  position: relative;
+}
+
+.navActive::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--green);
+}
+
 .topActions {
   gap: 12px;
 }

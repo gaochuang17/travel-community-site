@@ -5,7 +5,7 @@ import styles from "./FeedColumn.module.css";
 
 export function FeedColumn({ posts }) {
   return (
-    <section className={styles.feedColumn} id="notes">
+    <section className={styles.feedColumn}>
       <div className={styles.sectionHeading}>
         <div>
           <p className={styles.eyebrow}>社区精选</p>

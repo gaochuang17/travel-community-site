@@ -20,6 +20,10 @@
   top: 90px;
 }
 
+.mainColumn {
+  min-width: 0;
+}
+
 .sideSection {
   background: var(--surface);
   border: 1px solid var(--line);

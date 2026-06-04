@@ -1,15 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { getCitySlug } from "../../utils/slug";
 import styles from "./DestinationCard.module.css";
 
-export function DestinationCard({ item }) {
+export function DestinationCard({ item, variant = "compact" }) {
+  const citySlug = getCitySlug(item.city);
+
   return (
-    <article className={styles.destinationCard}>
+    <Link
+      className={`${styles.destinationCard} ${variant === "large" ? styles.large : ""}`}
+      to={`/routes/${citySlug}`}
+    >
       <img src={item.image} alt={item.city} />
       <div>
         <strong>{item.city}</strong>
         <p>{item.tag}</p>
         <span>{item.members} 人关注 · {item.temp}</span>
       </div>
-    </article>
+    </Link>
   );
 }

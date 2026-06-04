@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Sparkles, ChevronRight, Camera } from "lucide-react";
 import styles from "./Hero.module.css";
 
 export function Hero({ onShareClick }) {
   return (
-    <section className={styles.hero} id="home">
+    <section className={styles.hero}>
       <div className={styles.heroMedia} />
       <div className={styles.heroContent}>
         <p className={styles.eyebrow}>
@@ -16,26 +17,26 @@ export function Hero({ onShareClick }) {
           在行野发现旅行笔记、拼车搭子、城市路线和当地体验，把收藏夹里的远方变成下一次出发。
         </p>
         <div className={styles.heroActions}>
-          <button className={styles.primaryButtonLarge}>
+          <Link className={styles.primaryButtonLarge} to="/notes">
             探索社区
             <ChevronRight size={19} />
-          </button>
-          <button className={styles.secondaryButton} onClick={onShareClick}>
+          </Link>
+          <button className={styles.secondaryButton} onClick={onShareClick} type="button">
             <Camera size={18} />
             分享旅途
           </button>
         </div>
       </div>
-      <div className={styles.heroPanel}>
+      <Link className={styles.heroPanel} to="/groups">
         <span className={styles.panelLabel}>今日热门路线</span>
-        <strong>云南雨崩 7 日轻徒步</strong>
+        <strong>云南雨崩 10 日轻徒步</strong>
         <p>23 人正在讨论住宿、路况和装备。</p>
         <div className={styles.miniAvatars} aria-label="参与用户">
           <span>J</span>
           <span>Q</span>
           <span>Y</span>
         </div>
-      </div>
+      </Link>
     </section>
   );
 }

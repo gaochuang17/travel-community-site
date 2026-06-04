@@ -61,5 +61,6 @@ export const emptyDraft = {
   title: "",
   location: "",
   text: "",
-  image: ""
+  image: "",
+  rating: 0
 };
