@@ -1,3 +1,6 @@
+/**
+ * 右侧「路线规划器」入口卡片（功能占位，新建行程按钮暂无逻辑）。
+ */
 import React from "react";
 import { Mountain, CalendarDays } from "lucide-react";
 import styles from "./RouteCard.module.css";
@@ -10,7 +13,7 @@ export function RouteCard() {
       </div>
       <h3>路线规划器</h3>
       <p>把收藏的笔记拖进清单，自动生成每日路线和预算。</p>
-      <button className={styles.primaryButtonFull}>
+      <button className={styles.primaryButtonFull} type="button">
         <CalendarDays size={17} />
         新建行程
       </button>

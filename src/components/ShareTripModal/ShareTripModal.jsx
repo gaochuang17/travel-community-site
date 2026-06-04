@@ -1,3 +1,7 @@
+/**
+ * 发布旅途弹窗：标题、目的地、故事、星级评分、可选图片 URL。
+ * 点击遮罩关闭；提交由父级传入的 onSubmit（CommunityContext.submitTrip）处理。
+ */
 import React from "react";
 import { X, Send, Image, Star } from "lucide-react";
 import styles from "./ShareTripModal.module.css";
@@ -69,7 +73,7 @@ export function ShareTripModal({ draft, isReady, onChange, onClose, onSubmit }) 
                   key={star}
                   type="button"
                   className={`${styles.starButton} ${draft.rating >= star ? styles.starActive : ""}`}
-                  onClick={() => onChange({ target: { name: 'rating', value: star } })}
+                  onClick={() => onChange({ target: { name: "rating", value: star } })}
                   aria-label={`${star}颗星`}
                 >
                   <Star size={24} />

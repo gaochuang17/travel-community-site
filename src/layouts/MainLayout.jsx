@@ -1,3 +1,7 @@
+/**
+ * 全站主布局：顶栏、可选 Hero、三栏内容区（左栏 / 中间 Outlet / 右栏）。
+ * 发布弹窗与 Toast 挂在此层，任意子路由均可触发发布。
+ */
 import React from "react";
 import { Outlet, useMatch } from "react-router-dom";
 import { Star } from "lucide-react";
@@ -14,6 +18,7 @@ import { destinations, trips } from "../data";
 import styles from "./MainLayout.module.css";
 
 export function MainLayout() {
+  /** 仅在发现页展示首屏 Hero */
   const showHero = useMatch({ path: "/discover", end: true });
   const {
     draft,
@@ -33,15 +38,18 @@ export function MainLayout() {
       {showHero && <Hero onShareClick={openShare} />}
 
       <section className={styles.contentGrid}>
+        {/* 左栏：用户卡片 + 同伴招募快捷入口 */}
         <aside className={styles.leftRail}>
           <ProfileCard />
           <TripsSection trips={trips} />
         </aside>
 
+        {/* 中间：当前路由对应的页面（Discover / Notes / Routes / Groups 等） */}
         <div className={styles.mainColumn}>
           <Outlet />
         </div>
 
+        {/* 右栏：热门目的地、路线规划器入口、社区评分 */}
         <aside className={styles.rightRail}>
           <div className={styles.sideSection}>
             <h3>热门目的地</h3>

@@ -1,3 +1,7 @@
+/**
+ * 笔记详情页（二级路由 /notes/:postSlug）。
+ * 根据 URL 中的 postSlug 从全局 posts 中查找；找不到则重定向回列表。
+ */
 import React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, MapPin, Star } from "lucide-react";

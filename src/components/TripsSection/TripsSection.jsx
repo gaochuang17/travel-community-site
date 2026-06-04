@@ -1,3 +1,6 @@
+/**
+ * 左侧同伴招募区块：标题链到 /groups，每条招募链到对应详情页。
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import { Users, ChevronRight } from "lucide-react";

@@ -1,3 +1,7 @@
+/**
+ * 同伴招募详情页（二级路由 /groups/:tripSlug）。
+ * 展示招募标题与静态讨论数据；「我想加入」为占位按钮（未接后端）。
+ */
 import React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, MessageCircle, Users } from "lucide-react";

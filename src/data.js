@@ -1,3 +1,9 @@
+/**
+ * 静态种子数据（原型阶段无后端，数据仅存于内存）。
+ * 刷新页面后用户新发布的笔记会丢失，仅保留此处定义的初始数据。
+ */
+
+/** 右侧栏与路线页展示的热门目的地列表 */
 export const destinations = [
   {
     city: "京都",
@@ -22,6 +28,7 @@ export const destinations = [
   }
 ];
 
+/** 社区旅行笔记初始列表，发布功能会在此基础上 prepend 新帖子 */
 export const initialPosts = [
   {
     author: "林舟",
@@ -47,6 +54,7 @@ export const initialPosts = [
   }
 ];
 
+/** 同伴招募标题列表，用于侧栏与 /groups 页面 */
 export const trips = [
   "端午青甘小环线拼车",
   "新疆夏季自驾同伴",
@@ -54,9 +62,11 @@ export const trips = [
   "川西露营装备清单"
 ];
 
+/** 发布笔记时未填写图片 URL 时使用的默认封面 */
 export const fallbackTripImage =
   "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=85";
 
+/** 发布弹窗表单的初始空状态 */
 export const emptyDraft = {
   title: "",
   location: "",

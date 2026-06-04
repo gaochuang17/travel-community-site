@@ -1,3 +1,7 @@
+/**
+ * 路线首页（一级路由 /routes）：以大卡形式展示所有热门目的地。
+ * 点击卡片进入 /routes/:citySlug 详情页。
+ */
 import React from "react";
 import { destinations } from "../../data";
 import { DestinationCard } from "../../components/DestinationCard/DestinationCard";

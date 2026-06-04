@@ -1,3 +1,6 @@
+/**
+ * 全局操作反馈提示（如发布成功），由 MainLayout 在 notice 非空时挂载。
+ */
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
 import styles from "./Toast.module.css";

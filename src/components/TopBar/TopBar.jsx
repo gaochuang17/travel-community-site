@@ -1,8 +1,12 @@
+/**
+ * 顶栏：品牌、一级导航（NavLink 高亮当前模块）、搜索框、通知、发布按钮。
+ */
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Bell, Compass, Plus, Search } from "lucide-react";
 import styles from "./TopBar.module.css";
 
+/** 顶栏一级路由；discover 使用 end 避免子路径误高亮 */
 const navItems = [
   { to: "/discover", label: "发现", end: true },
   { to: "/routes", label: "路线" },
@@ -32,6 +36,7 @@ export function TopBar({ onShareClick }) {
         ))}
       </nav>
       <div className={styles.topActions}>
+        {/* 搜索：UI 占位，尚未实现检索逻辑 */}
         <label className={styles.searchBox}>
           <Search size={18} />
           <input placeholder="搜索目的地、攻略、同伴" />

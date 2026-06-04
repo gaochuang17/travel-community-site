@@ -1,3 +1,7 @@
+/**
+ * 发现页首屏 Banner： slogan、探索社区（链到笔记）、分享旅途（打开发布弹窗）、热门路线面板（链到同伴）。
+ * 仅在 MainLayout 判定为 /discover 时渲染。
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import { Sparkles, ChevronRight, Camera } from "lucide-react";

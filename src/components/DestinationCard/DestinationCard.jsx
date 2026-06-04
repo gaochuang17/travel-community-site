@@ -1,3 +1,7 @@
+/**
+ * 目的地卡片：compact 用于右侧栏，large 用于路线首页网格。
+ * 点击跳转到 /routes/:citySlug。
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import { getCitySlug } from "../../utils/slug";

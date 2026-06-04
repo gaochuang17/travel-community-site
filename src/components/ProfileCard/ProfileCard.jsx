@@ -1,3 +1,6 @@
+/**
+ * 左侧用户卡片：展示静态个人概览（收藏/关注/草稿数为占位数据）。
+ */
 import React from "react";
 import styles from "./ProfileCard.module.css";
 

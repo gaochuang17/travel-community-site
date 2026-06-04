@@ -1,3 +1,7 @@
+/**
+ * 目的地详情页（二级路由 /routes/:citySlug）。
+ * 展示城市封面、标签、温度与关注数；无效 slug 时回到路线列表。
+ */
 import React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, Thermometer } from "lucide-react";
@@ -7,8 +11,6 @@ import styles from "./DestinationDetailPage.module.css";
 
 export function DestinationDetailPage() {
   const { citySlug } = useParams();
-  console.log(citySlug,useParams());
-  
   const destination = findDestinationBySlug(destinations, citySlug);
 
   if (!destination) {

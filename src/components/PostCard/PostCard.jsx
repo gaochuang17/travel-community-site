@@ -1,3 +1,7 @@
+/**
+ * 单条旅行笔记卡片：封面、作者、标题、评分、摘要与互动数据。
+ * 封面/标题/「查看详情」链到 /notes/:postSlug；点赞等按钮为展示占位。
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Star } from "lucide-react";

@@ -1,3 +1,7 @@
+/**
+ * 同伴招募列表页（一级路由 /groups）。
+ * 每条招募链接到 /groups/:tripSlug 详情页。
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Users } from "lucide-react";
