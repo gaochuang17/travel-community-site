@@ -4,7 +4,7 @@
  */
 import React from "react";
 import { X, Send, Image, Star } from "lucide-react";
-import styles from "./ShareTripModal.module.css";
+import styles from "./ShareTripModal.module.less";
 
 export function ShareTripModal({ draft, isReady, onChange, onClose, onSubmit }) {
   return (

@@ -1,0 +1,134 @@
+.postCard {
+  .card-panel();
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+
+    @media (max-width: @breakpoint-sm) {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: clamp(21px, 2.4vw, 28px);
+    line-height: 1.25;
+  }
+}
+
+.freshPost {
+  border-color: fade(@coral, 46%);
+  box-shadow: 0 14px 34px fade(@coral, 13%);
+}
+
+.postBody {
+  padding: 22px;
+
+  @media (max-width: @breakpoint-sm) {
+    padding: 18px;
+  }
+}
+
+.postAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 4px 0 0;
+    color: @muted;
+    font-size: 13px;
+  }
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  background: @coral;
+  font-weight: 900;
+}
+
+.titleLink:hover {
+  color: @green;
+}
+
+.shareAction {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid fade(@green, 25%);
+  border-radius: @radius;
+  background: fade(@green, 8%);
+  color: @green-dark;
+  font-weight: 700;
+}
+
+.ratingDisplay {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0 16px;
+  font-size: 13px;
+  color: @muted;
+}
+
+.starFilled {
+  color: #f59e0b;
+  fill: #f59e0b;
+}
+
+.starEmpty {
+  color: #d1d5db;
+}
+
+.freshBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  margin-bottom: 12px;
+  border-radius: @radius;
+  background: fade(@coral, 12%);
+  color: #b4472f;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.postText {
+  color: #4e5f5a;
+  line-height: 1.75;
+}
+
+.postActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid @line;
+    border-radius: @radius;
+    background: #fbfcfa;
+    color: #40514c;
+    cursor: pointer;
+    font-family: inherit;
+  }
+}

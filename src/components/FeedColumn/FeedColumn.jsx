@@ -5,7 +5,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import { PostCard } from "../PostCard/PostCard";
-import styles from "./FeedColumn.module.css";
+import styles from "./FeedColumn.module.less";
 
 export function FeedColumn({ posts }) {
   return (

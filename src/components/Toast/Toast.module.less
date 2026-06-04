@@ -9,16 +9,14 @@
   min-height: 46px;
   padding: 0 16px;
   transform: translateX(-50%);
-  border-radius: 8px;
-  background: var(--green-dark);
+  border-radius: @radius;
+  background: @green-dark;
   color: #fff;
-  box-shadow: 0 16px 38px rgba(18, 75, 64, 0.28);
+  box-shadow: 0 16px 38px fade(@green-dark, 28%);
   font-weight: 800;
   white-space: nowrap;
-}
 
-@media (max-width: 560px) {
-  .toast {
+  @media (max-width: @breakpoint-sm) {
     width: calc(100% - 28px);
     justify-content: center;
   }

@@ -1,0 +1,41 @@
+// 可复用样式片段
+.card-panel() {
+  background: @surface;
+  border: 1px solid @line;
+  border-radius: @radius;
+  box-shadow: @card-shadow;
+}
+
+.eyebrow-label() {
+  color: @green;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.inline-primary-btn() {
+  min-height: 42px;
+  border-radius: @radius;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  font-weight: 750;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.back-link() {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 18px 0;
+  color: @green-dark;
+  font-weight: 650;
+  font-size: 14px;
+
+  &:hover {
+    color: @green;
+  }
+}

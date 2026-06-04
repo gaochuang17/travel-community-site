@@ -7,7 +7,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, MapPin, Star } from "lucide-react";
 import { useCommunity } from "../../context/CommunityContext";
 import { findPostBySlug } from "../../utils/slug";
-import styles from "./PostDetailPage.module.css";
+import styles from "./PostDetailPage.module.less";
 
 export function PostDetailPage() {
   const { postSlug } = useParams();

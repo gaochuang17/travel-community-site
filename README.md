@@ -1,6 +1,6 @@
 # 行野 Travel Circle
 
-一个使用 React + Webpack + React Router（HashRouter）搭建的旅行社区网站原型，包含旅行动态流、热门目的地、同伴招募和路线规划入口。
+一个使用 React + Webpack + Less + React Router（HashRouter）搭建的旅行社区网站原型，包含旅行动态流、热门目的地、同伴招募和路线规划入口。
 
 ## 路由结构
 

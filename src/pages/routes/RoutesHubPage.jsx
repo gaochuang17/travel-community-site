@@ -5,7 +5,7 @@
 import React from "react";
 import { destinations } from "../../data";
 import { DestinationCard } from "../../components/DestinationCard/DestinationCard";
-import styles from "./RoutesHubPage.module.css";
+import styles from "./RoutesHubPage.module.less";
 
 export function RoutesHubPage() {
   return (

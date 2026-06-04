@@ -1,0 +1,184 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 16px clamp(18px, 4vw, 56px);
+  background: fade(@paper, 90%);
+  border-bottom: 1px solid fade(@line, 80%);
+  backdrop-filter: blur(16px);
+
+  @media (max-width: @breakpoint-lg) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: @breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.brand,
+.navLinks,
+.topActions {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brandMark,
+.iconButton {
+  display: grid;
+  place-items: center;
+}
+
+.brandMark {
+  width: 40px;
+  height: 40px;
+  border-radius: @radius;
+  background: @green;
+  color: #fff;
+}
+
+.navLinks {
+  justify-content: center;
+  gap: 26px;
+  color: #34413d;
+  font-weight: 650;
+
+  @media (max-width: @breakpoint-lg) {
+    display: none;
+  }
+
+  a:hover {
+    color: @green;
+  }
+}
+
+.navActive {
+  color: @green;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    border-radius: 2px;
+    background: @green;
+  }
+}
+
+.topActions {
+  gap: 12px;
+
+  @media (max-width: @breakpoint-lg) {
+    justify-content: end;
+  }
+
+  @media (max-width: @breakpoint-md) {
+    justify-content: stretch;
+  }
+
+  @media (max-width: @breakpoint-sm) {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+  }
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(28vw, 320px);
+  min-width: 220px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid @line;
+  border-radius: @radius;
+  color: @muted;
+
+  @media (max-width: @breakpoint-md) {
+    width: 100%;
+    min-width: 0;
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: @ink;
+    background: transparent;
+  }
+}
+
+.iconButton,
+.primaryButton,
+.secondaryButton {
+  min-height: 42px;
+  border-radius: @radius;
+  border: 1px solid transparent;
+}
+
+.iconButton {
+  width: 42px;
+  background: #fff;
+  border-color: @line;
+  color: @green-dark;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  font-weight: 750;
+}
+
+.primaryButton {
+  background: @green;
+  color: #fff;
+  box-shadow: @btn-shadow;
+
+  &:hover {
+    background: @green-dark;
+  }
+
+  @media (max-width: @breakpoint-sm) {
+    &:not(.large):not(.full) {
+      padding: 0 12px;
+    }
+  }
+}
+
+.secondaryButton {
+  background: #fff;
+  color: @green-dark;
+  border-color: @line;
+}
+
+.large {
+  min-height: 50px;
+  padding: 0 20px;
+}
+
+.small {
+  min-height: 38px;
+  padding: 0 13px;
+}
+
+.full {
+  width: 100%;
+}

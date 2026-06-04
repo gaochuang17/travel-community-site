@@ -7,7 +7,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, MessageCircle, Users } from "lucide-react";
 import { trips } from "../../data";
 import { findTripBySlug } from "../../utils/slug";
-import styles from "./GroupDetailPage.module.css";
+import styles from "./GroupDetailPage.module.less";
 
 export function GroupDetailPage() {
   const { tripSlug } = useParams();

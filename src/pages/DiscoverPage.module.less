@@ -1,0 +1,44 @@
+.discoverPage {
+  display: grid;
+  gap: 22px;
+}
+
+.quickLinks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+
+  @media (max-width: @breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quickCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  .card-panel();
+  color: @ink;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: fade(@green, 35%);
+    box-shadow: 0 8px 22px rgba(27, 42, 38, 0.08);
+    color: @green-dark;
+  }
+
+  strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: @muted;
+    line-height: 1.45;
+  }
+}

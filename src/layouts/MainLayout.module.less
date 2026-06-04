@@ -1,0 +1,84 @@
+.appShell {
+  min-height: 100vh;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) minmax(260px, 340px);
+  gap: 24px;
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 28px clamp(16px, 3vw, 36px) 60px;
+  align-items: start;
+
+  @media (max-width: @breakpoint-lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  }
+
+  @media (max-width: @breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: @breakpoint-sm) {
+    padding-inline: 14px;
+  }
+}
+
+.leftRail,
+.rightRail {
+  display: grid;
+  gap: 18px;
+  position: sticky;
+  top: 90px;
+}
+
+.leftRail {
+  @media (max-width: @breakpoint-lg) {
+    position: static;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: @breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rightRail {
+  @media (max-width: @breakpoint-lg) {
+    top: 86px;
+  }
+
+  @media (max-width: @breakpoint-md) {
+    position: static;
+  }
+}
+
+.mainColumn {
+  min-width: 0;
+}
+
+.sideSection {
+  .card-panel();
+  padding: 18px;
+
+  h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+  }
+}
+
+.destinationList {
+  display: grid;
+  gap: 12px;
+}
+
+.ratingStrip {
+  .card-panel();
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 16px;
+  color: @green-dark;
+  font-weight: 750;
+}

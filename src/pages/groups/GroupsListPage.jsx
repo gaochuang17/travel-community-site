@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Users } from "lucide-react";
 import { trips } from "../../data";
 import { getTripSlug } from "../../utils/slug";
-import styles from "./GroupsListPage.module.css";
+import styles from "./GroupsListPage.module.less";
 
 export function GroupsListPage() {
   return (

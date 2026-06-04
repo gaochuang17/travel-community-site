@@ -3,7 +3,7 @@
  */
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
-import styles from "./Toast.module.css";
+import styles from "./Toast.module.less";
 
 export function Toast({ notice }) {
   return (

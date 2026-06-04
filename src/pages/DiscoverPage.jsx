@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, MapPin, Users, BookOpen } from "lucide-react";
 import { FeedColumn } from "../components/FeedColumn/FeedColumn";
 import { useCommunity } from "../context/CommunityContext";
-import styles from "./DiscoverPage.module.css";
+import styles from "./DiscoverPage.module.less";
 
 /** 跳转到各一级模块的快捷卡片配置 */
 const highlights = [

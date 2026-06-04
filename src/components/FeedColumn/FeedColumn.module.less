@@ -8,38 +8,34 @@
   align-items: end;
   justify-content: space-between;
   gap: 16px;
-}
 
-.sectionHeading h2 {
-  margin: 0;
-  font-size: clamp(26px, 3vw, 36px);
+  @media (max-width: @breakpoint-sm) {
+    align-items: start;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(26px, 3vw, 36px);
+  }
 }
 
 .eyebrow {
-  color: var(--green);
-  font-size: 13px;
+  .eyebrow-label();
   margin-bottom: 6px;
-  font-weight: 800;
 }
 
 .secondaryButtonSmall {
   min-height: 38px;
   padding: 0 13px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
+  border-radius: @radius;
+  border: 1px solid @line;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   font-weight: 750;
   background: #fff;
-  color: var(--green-dark);
+  color: @green-dark;
   cursor: pointer;
   font-family: inherit;
-}
-
-@media (max-width: 560px) {
-  .sectionHeading {
-    align-items: start;
-  }
 }

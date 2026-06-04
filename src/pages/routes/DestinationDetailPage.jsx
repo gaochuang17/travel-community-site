@@ -7,7 +7,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, Thermometer } from "lucide-react";
 import { destinations } from "../../data";
 import { findDestinationBySlug } from "../../utils/slug";
-import styles from "./DestinationDetailPage.module.css";
+import styles from "./DestinationDetailPage.module.less";
 
 export function DestinationDetailPage() {
   const { citySlug } = useParams();

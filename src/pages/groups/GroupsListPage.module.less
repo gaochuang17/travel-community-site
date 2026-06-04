@@ -1,0 +1,67 @@
+.groupsPage {
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  .card-panel();
+  padding: 20px 22px;
+
+  h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+  }
+
+  p {
+    margin: 0;
+    color: @muted;
+    line-height: 1.6;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  .eyebrow-label();
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.tripCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  .card-panel();
+  color: @ink;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: fade(@green, 35%);
+    color: @green-dark;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: @muted;
+  }
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: @radius;
+  display: grid;
+  place-items: center;
+  background: fade(@green, 10%);
+  color: @green-dark;
+}

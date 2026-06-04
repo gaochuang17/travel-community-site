@@ -1,6 +1,18 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const lessAdditionalData = `
+@import "${path.resolve(__dirname, "src/styles/variables.less")}";
+@import "${path.resolve(__dirname, "src/styles/mixins.less")}";
+`;
+
+const lessLoader = {
+  loader: "less-loader",
+  options: {
+    additionalData: lessAdditionalData
+  }
+};
+
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.jsx"),
   output: {
@@ -20,21 +32,24 @@ module.exports = {
         use: "babel-loader"
       },
       {
-        test: /\.module\.css$/,
+        test: /\.module\.less$/,
         use: [
           "style-loader",
           {
             loader: "css-loader",
             options: {
-              modules: true
+              modules: {
+                localIdentName: "[name]__[local]___[hash:base64:5]"
+              }
             }
-          }
+          },
+          lessLoader
         ]
       },
       {
-        test: /\.css$/,
-        exclude: /\.module\.css$/,
-        use: ["style-loader", "css-loader"]
+        test: /\.less$/,
+        exclude: /\.module\.less$/,
+        use: ["style-loader", "css-loader", lessLoader]
       }
     ]
   },

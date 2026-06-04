@@ -5,7 +5,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Users, ChevronRight } from "lucide-react";
 import { getTripSlug } from "../../utils/slug";
-import styles from "./TripsSection.module.css";
+import styles from "./TripsSection.module.less";
 
 export function TripsSection({ trips }) {
   return (

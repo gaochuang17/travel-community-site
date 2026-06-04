@@ -4,7 +4,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Bell, Compass, Plus, Search } from "lucide-react";
-import styles from "./TopBar.module.css";
+import styles from "./TopBar.module.less";
 
 /** 顶栏一级路由；discover 使用 end 避免子路径误高亮 */
 const navItems = [

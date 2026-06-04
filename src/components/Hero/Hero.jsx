@@ -5,7 +5,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Sparkles, ChevronRight, Camera } from "lucide-react";
-import styles from "./Hero.module.css";
+import styles from "./Hero.module.less";
 
 export function Hero({ onShareClick }) {
   return (

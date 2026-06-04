@@ -3,7 +3,7 @@
  */
 import React from "react";
 import { Mountain, CalendarDays } from "lucide-react";
-import styles from "./RouteCard.module.css";
+import styles from "./RouteCard.module.less";
 
 export function RouteCard() {
   return (

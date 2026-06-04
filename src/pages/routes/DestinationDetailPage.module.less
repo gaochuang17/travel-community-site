@@ -1,0 +1,57 @@
+.detailPage {
+  .card-panel();
+  overflow: hidden;
+}
+
+.backLink {
+  .back-link();
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.body {
+  padding: 20px 22px 26px;
+
+  h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+  }
+}
+
+.tag {
+  margin: 0 0 8px;
+  color: @green;
+  font-weight: 700;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 16px;
+  color: @muted;
+}
+
+.copy {
+  margin: 0 0 20px;
+  line-height: 1.65;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: @radius;
+  background: @green;
+  color: #fff;
+  font-weight: 700;
+
+  &:hover {
+    background: @green-dark;
+  }
+}

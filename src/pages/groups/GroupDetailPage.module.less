@@ -1,0 +1,61 @@
+.detailPage {
+  .card-panel();
+}
+
+.backLink {
+  .back-link();
+}
+
+.body {
+  padding: 8px 22px 26px;
+
+  h1 {
+    margin: 0 0 14px;
+    font-size: 28px;
+    line-height: 1.25;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: @coral;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: @muted;
+  font-weight: 650;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.copy {
+  margin: 0 0 22px;
+  line-height: 1.65;
+}
+
+.joinButton {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: @radius;
+  background: @green;
+  color: #fff;
+  font-weight: 750;
+  box-shadow: @btn-shadow;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:hover {
+    background: @green-dark;
+  }
+}

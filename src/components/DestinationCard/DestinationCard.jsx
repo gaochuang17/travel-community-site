@@ -5,7 +5,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getCitySlug } from "../../utils/slug";
-import styles from "./DestinationCard.module.css";
+import styles from "./DestinationCard.module.less";
 
 export function DestinationCard({ item, variant = "compact" }) {
   const citySlug = getCitySlug(item.city);

@@ -15,7 +15,7 @@ import { ShareTripModal } from "../components/ShareTripModal/ShareTripModal";
 import { Toast } from "../components/Toast/Toast";
 import { useCommunity } from "../context/CommunityContext";
 import { destinations, trips } from "../data";
-import styles from "./MainLayout.module.css";
+import styles from "./MainLayout.module.less";
 
 export function MainLayout() {
   /** 仅在发现页展示首屏 Hero */

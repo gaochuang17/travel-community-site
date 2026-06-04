@@ -6,7 +6,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Star } from "lucide-react";
 import { getPostSlug } from "../../utils/slug";
-import styles from "./PostCard.module.css";
+import styles from "./PostCard.module.less";
 
 export function PostCard({ post }) {
   const postSlug = getPostSlug(post);
